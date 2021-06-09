@@ -1,0 +1,12 @@
+body{
+    background-color: 	#ffffee;
+    color: 	#6b6b6b;
+}
+header{
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 400;
+    margin-top: 12px;
+}
