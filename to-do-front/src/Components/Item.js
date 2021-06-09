@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function Item() {
+export default function Item(props) {
     return (
-        <div>
-            
+        <div className='singleElement'> 
+            <input type="checkbox"/> 
+            {props.text}
         </div>
     )
 }

@@ -10,3 +10,15 @@ header{
     font-weight: 400;
     margin-top: 12px;
 }
+input, input:focus{
+    border: none;
+    padding: 12px;
+}
+.input-container{
+    text-align: center;
+    margin-top: 12px;
+}
+.singleElement{
+    text-align: center;
+    margin: 12px;
+}
