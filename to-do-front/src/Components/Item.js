@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import Draggable from 'react-draggable'
 export default function Item(props) {
     const [stausOfCheck,setStatusOfCheck] = useState(false)
     const checkStatus = (stat,id) =>{
@@ -7,9 +7,11 @@ export default function Item(props) {
             setStatusOfCheck(stat)
     }
     return (
-        <li className='singleElement'>
+       <Draggable axis={'x'} >
+            <li className='singleElement'>
             <input onChange={e=>checkStatus(e.target.checked,props.id)} type="checkbox"/> {
             stausOfCheck ? <del> {props.text}</del> : props.text
         } </li>
+       </Draggable>
     )
 }

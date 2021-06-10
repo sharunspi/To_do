@@ -43,4 +43,12 @@ input[type='checkbox']{
 }
 li{
     list-style-type: none;
+    cursor: move;
+    width: 24em;
+}
+li:hover{
+    border-radius: 2px;
+    border-color: coral;
+    border: 2px;
+    border-style: solid;
 }
