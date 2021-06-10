@@ -12,7 +12,9 @@ export default function App() {
             complete:false
         }])
     }
-
+    const setStatus = val =>{
+        console.log(val)
+    }
     return (
         <div>
             <Header/>
@@ -22,7 +24,7 @@ export default function App() {
              {
                      taskList.length >0 && 
                      taskList.map((taskOb,index)=>{
-                         return <Item key={index} id={index} complete={taskOb.complete} text={taskOb.text}/>
+                         return <Item status={setStatus} key={index} id={index} complete={taskOb.complete} text={taskOb.text}/>
                      })
                  }
              </ul>

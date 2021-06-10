@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Item(props) {
-    const checkStatus = stat =>{
-        console.log(stat)
-        console.log(props.id)
+    const [stausOfCheck,setStatusOfCheck] = useState(false)
+    const checkStatus = (stat,id) =>{
+        props.status({stat,id})
+            setStatusOfCheck(stat)
     }
     return (
         <li className='singleElement'>
-            <input checked={props.complete} onChange={e=>checkStatus(e.target.checked)} type="checkbox"/> {
-            props.text
+            <input onChange={e=>checkStatus(e.target.checked,props.id)} type="checkbox"/> {
+            stausOfCheck ? <del> {props.text}</del> : props.text
         } </li>
     )
 }
