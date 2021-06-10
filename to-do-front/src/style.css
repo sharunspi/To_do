@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 :root{
     --theme-bg-color:#ffffee;
     --theme-font:'Shadows Into Light', cursive;
+    --theme-main-header-font:'Permanent Marker', cursive;
 }
 body{
     background-color: 	var(--theme-bg-color);
@@ -15,12 +17,21 @@ header{
     font-size: 2em;
     font-weight: 400;
     margin-top: 12px;
+    font-family: var(--theme-main-header-font);
 }
 input, input:focus{
     border: none;
-    padding: 12px;
+    padding: 16px;
     background-color: var(--theme-bg-color); 
     font-family: var(--theme-font);
+    font-size: 1.2em;
+}
+input[type='checkbox']{
+    width: 20px;
+    height: 20px ;
+    border-radius: 4px;
+    transition: all .5s ease;
+    cursor: pointer;
 }
 .input-container{
     text-align: center;
