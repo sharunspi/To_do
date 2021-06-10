@@ -7,10 +7,10 @@ export default function App() {
     const [taskList,setTaskList] = useState([])
     const newTaskAddedFunc = task =>{
         setNewTask(task)
-        setTaskList(...taskList,{
+        setTaskList([...taskList,{
             text:task,
             complete:false
-        })
+        }])
     }
 
     return (
@@ -18,12 +18,14 @@ export default function App() {
             <Header/>
             <InputField newTaksAdded={newTaskAddedFunc}/>
             <div className="inputContainer">
-                 {
+             <ul>
+             {
                      taskList.length >0 && 
-                     taskList.map(taskOb=>{
-                         return <Item text={taskOb.text}/>
+                     taskList.map((taskOb,index)=>{
+                         return <Item key={index} text={taskOb.text}/>
                      })
                  }
+             </ul>
             </div>
         </div>
     )

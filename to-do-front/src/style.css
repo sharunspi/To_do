@@ -1,5 +1,8 @@
+:root{
+    --theme-bg-color:#ffffee
+}
 body{
-    background-color: 	#ffffee;
+    background-color: 	var(--theme-bg-color);
     color: 	#6b6b6b;
 }
 header{
@@ -13,12 +16,16 @@ header{
 input, input:focus{
     border: none;
     padding: 12px;
+    background-color: var(--theme-bg-color); 
 }
 .input-container{
     text-align: center;
     margin-top: 12px;
 }
 .singleElement{
-    text-align: center;
-    margin: 12px;
+    margin-top: 2em;
+    margin-left: 33em;
+}
+li{
+    list-style-type: none;
 }
