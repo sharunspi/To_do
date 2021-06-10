@@ -9,7 +9,7 @@ export default function InputField(props) {
     return (
         <div className='input-container'>
            <form onSubmit={e=>{newEventAdded(e)}}>
-            <input type="text" placeholder='type new task'/>
+            <input type="text" placeholder='Type new task'/>
            </form>
         </div>
     )

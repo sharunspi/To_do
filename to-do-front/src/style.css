@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 :root{
-    --theme-bg-color:#ffffee
+    --theme-bg-color:#ffffee;
+    --theme-font:'Shadows Into Light', cursive;
 }
 body{
     background-color: 	var(--theme-bg-color);
     color: 	#6b6b6b;
+    font-family: var(--theme-font);
 }
 header{
     height: 60px;
@@ -17,6 +20,7 @@ input, input:focus{
     border: none;
     padding: 12px;
     background-color: var(--theme-bg-color); 
+    font-family: var(--theme-font);
 }
 .input-container{
     text-align: center;
