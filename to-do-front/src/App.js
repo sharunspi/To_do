@@ -22,7 +22,7 @@ export default function App() {
              {
                      taskList.length >0 && 
                      taskList.map((taskOb,index)=>{
-                         return <Item key={index} text={taskOb.text}/>
+                         return <Item key={index} id={index} complete={taskOb.complete} text={taskOb.text}/>
                      })
                  }
              </ul>
