@@ -1,7 +1,8 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import Item from './Components/Item'
 import InputField from './Components/InputField'
 import Header from './Components/Header'
+import {getAllTask } from './API'
 export default function App() {
     const [newTask,setNewTask] = useState('')
     const [taskList,setTaskList] = useState([])
@@ -15,6 +16,14 @@ export default function App() {
     const setStatus = val =>{
         console.log(val)
     }
+    useEffect(()=>{
+    getAllTask().then(res=>{
+        setTaskList(res.data.listOfTasks)
+      
+    }).catch(err=>{
+        console.log(err)
+    })
+    },[])
     return (
         <div>
             <Header/>
@@ -24,7 +33,7 @@ export default function App() {
              {
                      taskList.length >0 && 
                      taskList.map((taskOb,index)=>{
-                         return <Item status={setStatus} key={index} id={index} complete={taskOb.complete} text={taskOb.text}/>
+                         return <Item status={setStatus} key={taskOb.taskId} id={taskOb.taskId} complete={taskOb.status} text={taskOb.task}/>
                      })
                  }
              </ul>
